@@ -8,10 +8,9 @@ export async function POST(request:Request){
   const body = await request.json();
 
 
-  const value = body.value;
+const value = body.value as string;
 
-
-  const result = iocIntelligence[value];
+const result = iocIntelligence[value];
 
 
 
