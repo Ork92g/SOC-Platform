@@ -10,7 +10,6 @@ export const alertsManagement = [
     time:"5 minutes ago"
   },
 
-
   {
     id:"ALT-002",
     title:"Suspicious PowerShell Activity",
@@ -20,7 +19,6 @@ export const alertsManagement = [
     analyst:"Or",
     time:"20 minutes ago"
   },
-
 
   {
     id:"ALT-003",
@@ -33,3 +31,6 @@ export const alertsManagement = [
   }
 
 ];
+
+
+export const alertActions:any[] = [];
