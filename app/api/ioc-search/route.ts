@@ -1,63 +1,68 @@
 import { NextResponse } from "next/server";
-import { iocIntelligence } from "../../data/ioc-intelligence";
+
+const iocIntelligence = {
+  "185.89.45.22": {
+    type: "IP Address",
+    risk: "High",
+    reputation: "Malicious",
+    source: "Threat Intelligence"
+  },
+  "8.8.8.8": {
+    type: "IP Address",
+    risk: "Low",
+    reputation: "Clean",
+    source: "Google DNS"
+  },
+  "malicious-domain.com": {
+    type: "Domain",
+    risk: "Critical",
+    reputation: "Malicious",
+    source: "Threat Intelligence"
+  }
+} as const;
 
 
-export async function POST(request:Request){
+export async function POST(request: Request) {
+  try {
+    const body = await request.json();
+
+    const value = String(body.value);
+
+    const result =
+      iocIntelligence[value as keyof typeof iocIntelligence];
 
 
-  const body = await request.json();
-
-
-const value = body.value as string;
-
-const result = iocIntelligence[value];
-
-
-
-  if(result){
+    if (result) {
+      return NextResponse.json({
+        found: true,
+        value,
+        result
+      });
+    }
 
 
     return NextResponse.json({
-
-      success:true,
-
-      found:true,
-
-      data:{
-
-        value:value,
-
-        ...result
-
+      found: false,
+      value,
+      result: {
+        type: "Unknown",
+        risk: "Unknown",
+        reputation: "No Data",
+        source: "Local Database"
       }
-
     });
 
 
+  } catch (error) {
+
+    return NextResponse.json(
+      {
+        error: "Invalid request"
+      },
+      {
+        status: 400
+      }
+    );
+
   }
-
-
-
-  return NextResponse.json({
-
-    success:true,
-
-    found:false,
-
-    data:{
-
-      value:value,
-
-      risk:"Unknown",
-
-      reputation:"No data",
-
-      source:"Internal Database"
-
-    }
-
-  });
-
-
-
 }
