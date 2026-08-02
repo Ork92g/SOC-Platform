@@ -181,8 +181,8 @@ export default function IncidentDetailsById(){
 
 
 
-  const mappedMitre = mitreData[incident.title] || [];
-
+const mappedMitre =
+  mitreData[incident.title as keyof typeof mitreData] || [];
 
 
 
