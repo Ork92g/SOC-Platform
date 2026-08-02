@@ -14,7 +14,21 @@ export default function IncidentDetailsById(){
 
 
 
-  const [incident,setIncident] = useState<any>(null);
+type Incident = {
+  id: string;
+  title: keyof typeof mitreData;
+  status: string;
+  severity: string;
+  analyst: string;
+  indicators?: string[];
+  timeline?: {
+    time: string;
+    action: string;
+  }[];
+};
+
+
+const [incident,setIncident] = useState<Incident | null>(null);
 
   const [note,setNote] = useState("");
 
