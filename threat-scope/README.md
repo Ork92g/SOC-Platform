@@ -1,44 +1,59 @@
-# ThreatScope 🛡️
+# 🛡️ ThreatScope
 
-ThreatScope is a Threat Intelligence platform designed to help SOC analysts investigate threat actors, malware campaigns, indicators of compromise (IOCs), and MITRE ATT&CK techniques.
+ThreatScope is a Cyber Threat Intelligence platform designed to help security analysts investigate threat actors, malware campaigns, Indicators of Compromise (IOCs), and MITRE ATT&CK techniques.
 
-The project was built from practical SOC experience and a desire to improve investigation workflows by creating a centralized intelligence view.
+The project was created from practical SOC experience and a desire to improve investigation workflows by building a centralized intelligence workspace.
 
 ---
 
-## 🚀 Features
+# 🚀 Features
 
-### Threat Actor Intelligence
-- Track known threat actors
-- View associated malware
-- Map MITRE ATT&CK techniques
-- Analyze indicators of compromise
+## Threat Actor Intelligence
 
-### Investigation Dashboard
-- Threat actor overview
-- Malware statistics
-- IOC visibility
-- Intelligence search
+- Threat actor profiles
+- Risk classification
+- Origin and aliases
+- Malware association
+- IOC tracking
+- MITRE ATT&CK technique mapping
+- Threat activity timeline
 
-### Intelligence Reports
-- Generate PDF threat reports
+
+## Investigation Workflow
+
+- Threat actor search
+- Intelligence overview cards
+- Structured security information
+- Investigation report generation
+
+
+## Reporting
+
+- Generate PDF intelligence reports
 - Export investigation findings
 
-### Threat Search
-- Search threat actors
-- Retrieve associated intelligence data
-
 ---
 
-## 🛠️ Technologies
+# 🧰 Technologies
 
 - Next.js 16
 - React
 - TypeScript
 - Tailwind CSS
 - jsPDF
-- MITRE ATT&CK inspired data modeling
 
 ---
 
-## 🏗️ Architecture
+# 🔐 Cybersecurity Concepts
+
+Implemented concepts:
+
+- Threat Intelligence
+- IOC Analysis
+- MITRE ATT&CK Framework
+- Malware Intelligence
+- SOC Investigation Workflow
+
+---
+
+# 📂 Architecture
