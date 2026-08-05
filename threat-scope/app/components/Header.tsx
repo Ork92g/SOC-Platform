@@ -3,9 +3,9 @@ export default function Header(){
 return (
 
 <header className="
-bg-slate-950
+bg-black
 border-b
-border-slate-800
+border-zinc-800
 p-6
 flex
 justify-between
@@ -15,29 +15,30 @@ items-center
 
 <div>
 
-
 <h1 className="
 text-3xl
 font-bold
-text-cyan-400
+text-purple-400
+tracking-wider
 ">
 
-⚡ ThreatScope
+THREATSCOPE
 
 </h1>
 
 
 <p className="
-text-slate-400
+text-zinc-400
 mt-1
 ">
 
-Threat Intelligence & Actor Tracking Platform
+Cyber Threat Intelligence Research Platform
 
 </p>
 
 
 </div>
+
 
 
 
@@ -46,22 +47,22 @@ text-right
 ">
 
 
-<div className="
+<p className="
 text-red-400
 font-bold
 ">
 
-● LIVE MONITORING
+● ACTIVE THREAT MONITORING
 
-</div>
+</p>
 
 
 <p className="
-text-slate-500
+text-zinc-500
 text-sm
 ">
 
-SOC Intelligence Engine
+Intelligence Engine v1.0
 
 </p>
 
@@ -69,11 +70,8 @@ SOC Intelligence Engine
 </div>
 
 
-
 </header>
 
-
 );
-
 
 }

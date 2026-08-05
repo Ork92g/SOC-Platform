@@ -41,9 +41,21 @@ export const threatActors = {
 
       "185.89.45.22"
 
+    ],
+
+
+    timeline:[
+
+      "2026 - New IOC discovered",
+
+      "2025 - SUNBURST malware campaign analyzed",
+
+      "2024 - MITRE ATT&CK techniques updated"
+
     ]
 
   },
+
 
 
 
@@ -52,7 +64,9 @@ export const threatActors = {
     name:"Lazarus Group",
 
     aliases:[
+
       "Hidden Cobra"
+
     ],
 
 
@@ -85,6 +99,17 @@ export const threatActors = {
     iocs:[
 
       "malicious-domain.com"
+
+    ],
+
+
+    timeline:[
+
+      "2026 - New campaign activity detected",
+
+      "2025 - Financial attack infrastructure identified",
+
+      "2024 - Malware family analysis completed"
 
     ]
 

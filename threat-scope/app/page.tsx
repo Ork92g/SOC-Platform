@@ -37,7 +37,7 @@ export default function Home() {
 
     <main className="
     min-h-screen
-    bg-slate-950
+    bg-black
     text-white
     ">
 
